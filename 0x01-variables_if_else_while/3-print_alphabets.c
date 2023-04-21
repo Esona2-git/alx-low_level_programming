@@ -1,9 +1,3 @@
-	return (0);
-}
-
-
-Task 3
-
 #include <stdio.h>
 
 /**

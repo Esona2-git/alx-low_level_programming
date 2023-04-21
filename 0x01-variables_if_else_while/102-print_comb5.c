@@ -31,6 +31,4 @@ putchar('0' + j / 10);
 	}
 	putchar('\n');
 	return (0);
-}
-
-And read up Betty coding style.. 
+} 
