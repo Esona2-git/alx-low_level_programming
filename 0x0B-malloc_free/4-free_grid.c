@@ -1,21 +1,19 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+
 /**
- * free_grid - frees 2d array
- * @grid: 2d grid
- * @height: height dimension of grid
- * Description: frees memory of grid
- * Return: nothing
+ * free_grid - Frees a 2-dimensional grid
+ * @grid: The grid to free
+ * @height: The height of the grid
  *
+ * Return: void
  */
 void free_grid(int **grid, int height)
 {
-	int i;
+	if (grid == NULL)
+		return; /* Nothing to free if grid is already NULL */
 
-	for (i = 0; i < height; i++)
-	{
-		free(grid[i]);
-	}
-	free(grid);
+	for (int i = 0; i < height; i++)
+		free(grid[i]); /* Free each row */
+
+	free(grid); /* Free the array of row pointers */
 }
